@@ -95,6 +95,10 @@ Gives this response
 ```
 
 
+## Other Handy Modules
+
+* [hongkong-weather](https://www.github.com/hongkongkiwi/node-hongkong-weather) - For Hong Kong Weather Information.
+
 ## Contributing
 
 Feel free to submit any pull requests or add functionality, I'm usually pretty responsive.
