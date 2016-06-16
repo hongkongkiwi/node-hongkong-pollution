@@ -78,6 +78,9 @@ HongKongPollution.prototype.getForecast = function() {
                   Upper: currentReport.AQHIRange.split(" to ")[1]
                 }
               };
+              if (!currentReport.AQHIRange.hasOwnProperty("Upper") || !currentReport.AQHIRange.Upper) {
+                currentReport.AQHIRange.Upper = currentReport.AQHIRange.Lower;
+              }
               callback(null, currentReport);
             }, function(err, currentReports) {
               forecast.data.CurrentAQHIReport = currentReports;
