@@ -1,7 +1,7 @@
 {
   "name": "hongkong-pollution",
-  "version": "1.0.3",
-  "description": "Simple module to get pollution data for Hong Kong.",
+  "version": "1.0.4",
+  "description": "Simple module to get pollution data from the Hong Kong Enviromental Department.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -29,6 +29,7 @@
   "dependencies": {
     "async": "^2.0.0-rc.5",
     "bluebird": "^3.4.0",
+    "debug": "^2.2.0",
     "request-promise": "^3.0.0"
   },
   "devDependencies": {

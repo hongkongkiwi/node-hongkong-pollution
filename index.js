@@ -4,14 +4,19 @@ var _ = require('underscore');
 var async = require('async');
 async = require('./lib/async.objectMap')(async); // Add objectMap function
 var moment = require('moment');
+var debug = require('debug')('pollution')
 
 var HongKongPollution = function(options) {
   this.options = _.extendOwn({
     lang: 'en'
   }, options);
+
+  debug("Class Initialized", options);
 };
 
 HongKongPollution.prototype.getForecast = function() {
+  debug(" -> getForecast()");
+
   var self = this;
 
   var options = {
@@ -81,10 +86,12 @@ HongKongPollution.prototype.getForecast = function() {
 };
 
 HongKongPollution.prototype.getAllDistrictReadings = function() {
+  debug(" -> getAllDistrictReadings()");
   return this.getDistrictReadings();
 };
 
 HongKongPollution.prototype.getDistrictReadings = function(districtName) {
+  debug(" -> getDistrictReadings(\"" + districtName + "\")");
   var self = this;
 
   var options = {
@@ -147,6 +154,7 @@ HongKongPollution.prototype.getDistrictReadings = function(districtName) {
 };
 
 HongKongPollution.prototype.getAQHIHistory = function(stationNameOrId) {
+  debug(" -> getAQHIHistory(\"" + stationNameOrId + "\")");
   var self = this;
 
   var options = {
