@@ -11,6 +11,12 @@ var HongKongPollution = function(options) {
     lang: 'en'
   }, options);
 
+  if (options.lang !== 'en' &&
+      options.lang !== 'tc' &&
+      options.lang !== 'sc') {
+        throw new Error("Invalid Language passed in options");
+      }
+
   debug("Class Initialized", options);
 };
 
