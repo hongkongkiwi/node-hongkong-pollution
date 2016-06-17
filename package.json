@@ -1,6 +1,6 @@
 {
   "name": "hongkong-pollution",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple module to get pollution data from the Hong Kong Enviromental Department.",
   "main": "index.js",
   "scripts": {
